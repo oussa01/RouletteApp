@@ -49,18 +49,18 @@
     filter: brightness(0.9);
   }
   
-  button > span {
+  :is(button > span) {
     display: block;
     position: relative;
     transition: transform var(--motion-duration) var(--motion-ease);
     z-index: 1;
   }
   
-  button:hover > span {
+  :is(button:hover > span) {
     transform: scale(1.05);
   }
   
-  button:active > span {
+  :is(button:active > span) {
     transform: scale(0.95);
   }
   
