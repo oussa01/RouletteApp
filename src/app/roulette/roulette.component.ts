@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouletteComponent {
   resolutions: string[] = [
-    "Learn a new programming language",
+    "Spend time with family",
     "Contribute to an open-source project",
     "Complete a technology certification",
     "Master a new software development framework",
     "Attend at least two tech conferences or meetups",
     "Improve coding practices and embrace best practices",
-    "Spend time with family",
+    "Learn a new programming language",
     "Collaborate on a cross-functional project",
     "Create and maintain a tech blog or portfolio",
     "o9tel ezzom la yo9tlek 9ablo",
@@ -50,6 +50,7 @@ export class RouletteComponent {
   translateY: number = 0;
   spinning: boolean = false;
   selectedResolution : string =''
+  message : string =''
   startSlotMachine() {
     if (!this.spinning) {
       this.spinning = true;
@@ -91,6 +92,7 @@ export class RouletteComponent {
         this.translateY = -targetPosition;
         this.spinning = false;
         this.selectedResolution = this.getCurrentWord();
+        this.message = this.selectedResolution;
       }
     };
 
