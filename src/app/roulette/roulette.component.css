@@ -1,0 +1,29 @@
+.slot-machine {
+  text-align: center;
+  margin: 20px;
+
+  :is(button) {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .slot-container {
+    overflow: hidden;
+    height: 30px; /* Adjust based on the desired height of the slot machine */
+    border: 1px solid #cd3030;
+    margin-top: 100px;
+    position: relative;
+  }
+
+
+  .word {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+  }
+}
