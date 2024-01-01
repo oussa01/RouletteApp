@@ -49,22 +49,22 @@
     filter: brightness(0.9);
   }
   
-  :is(button > span) {
+  :is(button) > span {
     display: block;
     position: relative;
     transition: transform var(--motion-duration) var(--motion-ease);
     z-index: 1;
   }
   
-  :is(button:hover > span) {
+  :is(button:hover) > span {
     transform: scale(1.05);
   }
   
-  :is(button:active > span) {
+  :is(button:active) > span {
     transform: scale(0.95);
   }
   
-  :is(button > svg) {
+  :is(button) > svg {
     fill: #950cde;
     position: absolute;
     top: -5%;
@@ -73,16 +73,17 @@
     height: 110%;
   }
   
-  :is(button > svg > path) {
+  :is(button) > svg > path {
     transition: var(--motion-duration) var(--motion-ease);
   }
   
-  :is(button:hover > svg > path) {
-    d: path("M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0");
+  :is(button:hover) > svg > path {
+    --d-value: path("M0,0 C0,-5 100,-5 100,0 C105,0 105,100 100,100 C100,105 0,105 0,100 C-5,100 -5,0 0,0");
+   
   }
-  
-  :is(button:active > svg > path) {
-    d: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
+
+  :is(button:active) > svg > path {
+    --d-value: path("M0,0 C30,10 70,10 100,0 C95,30 95,70 100,100 C70,90 30,90 0,100 C5,70 5,30 0,0");
   }
 
   .slot-container {
